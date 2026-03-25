@@ -1,0 +1,5 @@
+public class Cobertura {
+    public int Id { get; set; }
+    public string Nombre { get; set; }
+    public decimal MontoCobertura { get; set; }
+}
