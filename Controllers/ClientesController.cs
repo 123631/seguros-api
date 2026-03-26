@@ -11,6 +11,8 @@ public class ClientesController : ControllerBase {
 
     [HttpGet]
     public IActionResult Get(){
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
         return Ok(_context.Clientes.ToList());
     }
 }

@@ -1,9 +1,9 @@
 public class Vehiculo {
     public int Id { get; set; }
-    public string Placa { get; set; }
-    public string Marca { get; set; }
-    public string Modelo { get; set; }
-    public int Anio { get; set; }
-    public decimal ValorComercial { get; set; }
-    public ICollection<Poliza> Polizas { get; set; }
+    public required string Placa { get; set; }
+    public required string Marca { get; set; }
+    public required string Modelo { get; set; }
+    public required int Anio { get; set; }
+    public required decimal ValorComercial { get; set; }
+    public List<Poliza> Polizas { get; set; } = new();
 }

@@ -14,7 +14,7 @@ public class CoberturaRepository : ICoberturaRepository
         return await _context.Coberturas.ToListAsync();
     }
 
-    public async Task<Cobertura> GetById(int id)
+    public async Task<Cobertura?> GetById(int id)
     {
         return await _context.Coberturas.FindAsync(id);
     }
