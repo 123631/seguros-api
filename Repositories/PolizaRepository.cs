@@ -17,12 +17,12 @@ public class PolizaRepository : IPolizaRepository
             .ToListAsync();
     }
 
-    public async Task<Poliza> GetById(int id)
+    public async Task<Poliza?> GetById(int id)
     {
         return await _context.Polizas.FindAsync(id);
     }
 
-    public async Task<Poliza> GetPolizaDetalle(int id)
+    public async Task<Poliza?> GetPolizaDetalle(int id)
     {
         return await _context.Polizas
             .Include(p => p.Cliente)

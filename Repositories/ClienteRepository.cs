@@ -14,7 +14,7 @@ public class ClienteRepository : IClienteRepository
         return await _context.Clientes.ToListAsync();
     }
 
-    public async Task<Cliente> GetById(int id)
+    public async Task<Cliente?> GetById(int id)
     {
         return await _context.Clientes.FindAsync(id);
     }

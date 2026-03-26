@@ -1,7 +1,7 @@
 public class Cliente {
     public int Id { get; set; }
-    public string Nombre { get; set; }
-    public string Identificacion { get; set; }
-    public string Correo { get; set; }
-    public ICollection<Poliza> Polizas { get; set; }
+    public required string Nombre { get; set; }
+    public required string Identificacion { get; set; }
+    public required string Correo { get; set; }
+    public List<Poliza> Polizas { get; set; } = new();
 }
